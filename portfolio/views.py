@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models  import Project
 
 # Create your views here.
-def portfolio(request):
+def home(request):
     projects = Project.objects.all()
-    return render(request,'portfolio/home.html',{'project': projects})
+    return render(request,'portfolio/home.html',{'projects': projects})
 
